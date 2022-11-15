@@ -25,10 +25,10 @@ while True:
                 | 4: Exit Password Manager   |        
                 |____________________________|
                  """)
-
-    # Lets you end your password manager.
-    else:
-        print(Fore.LIGHTGREEN_EX + "              Thank you for your time!")
+    if pm_hud != "1" or "2" or "3" or "4":
+        print("Please choose a number between 1 and 4.")
+        time.sleep(1)
+        yes = "y"
 
     # Allows you to choose one of the four options in the terminal.
 
@@ -69,12 +69,7 @@ while True:
             for i in file:
                 data = i.split(":|")
                 print(data[0] + "\t\t" + data[1] + "\t\t" + data[2])
-            keepgoing = str(input("Do you want to continue? (y/n) "))
-            if keepgoing == "y" or "Y" or "Yes" or "yes":
-                continue
-            if keepgoing == "n" or "No" or "no" or "N":
-                print("Have a good day")
-
+                time.sleep(50)
         else:
             print("Sorry, Incorrect Password!")
 
@@ -82,10 +77,6 @@ while True:
 
     if pm_hud == "4":
         path = input("Thank you for using Password Manager!")
-    else:
-        print("Please choose a number between 1 and 4.")
-        time.sleep(1)
-        yes = "y"
     continue
     if keepgoing == "n" or "N" or "no" or "No":
         print("Have a nice day.")
