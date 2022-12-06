@@ -14,7 +14,7 @@ rep = str(data)
 
 partOne = rep.replace(']', '')
 partTwo = partOne.replace('[', '')
-partThree = partTwo.replace('', '')
+partThree = partTwo.replace('n', '')
 
 layout = [[sg.Text('Enter the Software, Username and Password')],
             [sg.Text('Software       '), sg.InputText()],
