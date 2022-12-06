@@ -2,16 +2,17 @@ import PySimpleGUI as sg
 
 sg.theme('Purple')   # Add a touch of color
 # All the stuff inside your window.
-file = open("Passwords.txt", "r")
-count = len(file.readlines())
-print(count)
-file.close()
+
+#Opens Passwords.txt
 f = open("Passwords.txt", "r")
+# Reads all the lines in the file
 data = f.readlines()
 f.close()
 
+# For the replacing text
 rep = str(data)
 
+# For replacing text, do it in parts so that it doesn't repeat the passwords 3x over.
 partOne = rep.replace(']', '')
 partTwo = partOne.replace('[', '')
 partThree = partTwo.replace('n', '')
